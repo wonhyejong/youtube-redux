@@ -54,3 +54,7 @@
     color:#fff;
     font-size: 0.825rem;
 }
+
+@media screen and (max-width : 960px) {
+    .header-end {display: none;}
+}

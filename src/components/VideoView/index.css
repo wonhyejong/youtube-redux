@@ -1,6 +1,7 @@
 .playVideoBox{
     flex: 1 1 65%;
     padding-right: 0.5rem;
+    
 }
 .iframeBox{
     margin-bottom: 1rem;

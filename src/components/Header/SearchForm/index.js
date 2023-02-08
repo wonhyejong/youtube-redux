@@ -10,9 +10,11 @@ const SearchForm = () => {
     const dispatch = useDispatch();
     const inputRef=useRef();
     const navigate=useNavigate()
+
     const onSearch = (keyword) => {
-        const url = searchUrl(keyword);
-        dispatch(getVideoList(url));
+        const url = searchUrl(keyword)
+        dispatch(getVideoList(url))
+        dispatch(videoListLayout('list'))
         navigate('/search')
     }
     const onSubmit = (e) => {
