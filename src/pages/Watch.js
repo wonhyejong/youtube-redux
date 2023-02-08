@@ -16,7 +16,7 @@ const Watch = () => {
             <VideoView id={id} channelId={channelId} />
             <ul className='watchList VideoRowList'>
                 {
-                    videoData10.map((item,idx)=>(
+                    videoData10.map((item)=>(
                         <VideoItem 
                             key={item.snippet.thumbnails.default.url} 
                             item={item.snippet} 

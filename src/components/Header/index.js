@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import SearchForm from './SearchForm';
-
+import {Link} from 'react-router-dom';
 const Header = () => {
     return (
         <div className='header'>
@@ -9,12 +9,12 @@ const Header = () => {
                 <button className='menuBtn'>
                     <i className="fas fa-bars"></i>
                 </button>
-              
+                <Link to="/">
                     <div className='logo'>
                         <img src="/images/logo.png" alt="logo" className='logoImage' />
                         <h1 className='logoTitle'>Youtube</h1>
                     </div>
-               
+                </Link>
             </div>
             <div className='header-center'>
                  <SearchForm  />
