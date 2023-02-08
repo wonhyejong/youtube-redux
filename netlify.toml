@@ -1,6 +1,8 @@
 [build]
-  command = "REACT_APP_CONTEXT=$CONTEXT npm run build"
+ command = "npm run build"
+ publish = "build"
 
 [context.production.environment]
-  REACT_APP_API_KEY = "AIzaSyAeemVbG90EXe0AL99KD3DMwVIYz69QYfY"
+  TOML_ENV_VAR = "From netlify.toml"
+  REACT_APP_TOML_ENV_VAR = "From netlify.toml (REACT_APP_)"
 
