@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 
 
-const VideoView  = () => {
+const VideoView  = ({id,channelId}) => {
 
     return (
         <div className='playVideoBox'>

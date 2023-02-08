@@ -7,12 +7,13 @@ import { getVideoList } from '../../store/video/videoSlice';
 import {videoUrl} from './../../lib/api';
 import {MoonLoader} from 'react-spinners/MoonLoader'
 const VideoList = () => {
-    const dispatch = useDispatch();
-    const {data,loading} = useSelector((state) =>state.video)
-    useEffect(()=>{
+  const dispatch = useDispatch();
+  const {data,loading}= useSelector((state) =>state.video);
+  useEffect(() => {
       dispatch(getVideoList(videoUrl))
-    },[])
-    if(loading){
+  },[])
+/*   
+  if(loading) {
       return (
         <MoonLoader 
           color="#36d7b7" 
@@ -28,10 +29,19 @@ const VideoList = () => {
           speedMultiplier={1}
         />
       )
-    }
+    } */
     return (
         <ul>
-          <VideoItem  />           
+          {
+             data.map((item)=>(
+                <VideoItem 
+                item={item.snippet} 
+                key={item.snippet.thumbnails.default.url} 
+                value={item}
+                />
+             ))
+          }
+              
         </ul>
     );
 };

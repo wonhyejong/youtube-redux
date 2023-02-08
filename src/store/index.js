@@ -1,8 +1,8 @@
 import { configureStore,combineReducers } from '@reduxjs/toolkit';
 import videoSlice from './video/videoSlice';
-import storageSession from 'redux-persist/lib/storage/session';
+import storageSession from 'redux-persist/lib/storage/session'
 import { persistReducer } from "redux-persist";
-
+/* import storage from "redux-persist/lib/storage"*/
 const persistConfig ={
     key: "root",
     storage:storageSession,
@@ -13,9 +13,10 @@ const reducer  = combineReducers({
 })
 
 const persistedReducer =persistReducer(persistConfig,reducer)
+
 const store = configureStore({
     reducer:persistedReducer,
-    middleware:(getDefaultMiddleware) =>  getDefaultMiddleware({
+    middleware:(getDefaultMiddleware) =>  getDefaultMiddleware({ 
         serializableCheck:false
     })
 })

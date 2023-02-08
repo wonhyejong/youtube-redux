@@ -25,7 +25,10 @@ export const getChannelInfo = createAsyncThunk(
     }
 )
 
-const videoSlice = createSlice({
+
+
+
+const videoSlice =  createSlice({
     name:'video',
     initialState:{
         data:[],
@@ -33,9 +36,9 @@ const videoSlice = createSlice({
         loading:true,
         channel:'',
     },
-    reducers:{
-        videoListLayout:(state,action)=>{
-            state.listLayout=action.payload;
+    reducers: {  
+        videoListLayout:(state,action) => {
+            state.listLayout=action.payload
         }
     },
     extraReducers:(builder)=>{
@@ -56,5 +59,5 @@ const videoSlice = createSlice({
     }
 })
 
-export const {videoListLayout} = videoSlice.actions
-export default videoSlice.reducer;
+export const { videoListLayout } = videoSlice.actions
+export default videoSlice.reducer

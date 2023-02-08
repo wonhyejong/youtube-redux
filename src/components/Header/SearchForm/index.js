@@ -5,7 +5,7 @@ import './index.css';
 const SearchForm = () => {
     
     return (
-     <form className='search' onSubmit={onSubmit}>
+     <form className='search' /* onSubmit={onSubmit} */>
         <input
             placeholder='검색'
             type="text"
